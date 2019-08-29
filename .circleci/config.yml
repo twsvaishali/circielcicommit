@@ -40,6 +40,7 @@ jobs:
           mkdir deploy
           cd deploy
           echo $CIRCLE_REPOSITORY_URL
+          echo $CIRCLE_BRANCH
           git clone -b gh-pages $CIRCLE_REPOSITORY_URL cloned-repo
           rm -rf cloned-repo/$CIRCLE_BRANCH/
           mkdir cloned-repo/$CIRCLE_BRANCH/
