@@ -39,7 +39,9 @@ jobs:
           rm -rf download
           mkdir download
           cd download
+          ls
           git clone -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL temp
+          ls
           cd ..
           rm -rf deploy
           mkdir deploy
@@ -49,6 +51,7 @@ jobs:
           mkdir cloned-repo/$CIRCLE_BRANCH/
           cp -R ../download/temp* cloned-repo/$CIRCLE_BRANCH/
           cd cloned-repo/
+          ls
           git add -A
           git commit -m "Version deploy - $CIRCLE_BRANCH Version & Build No. $CIRCLE_BUILD_NUM"
           git push origin gh-pages
