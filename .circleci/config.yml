@@ -35,7 +35,7 @@ jobs:
           mkdir download
           cd download
           ls
-          git clone -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL temp
+          git clone -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL
           ls
           cd ..
           rm -rf deploy
