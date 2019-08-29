@@ -12,14 +12,14 @@ jobs:
       # Add SSH Key
       - add_ssh_keys:
           fingerprints:
-            - $GITHUB_SSH_FINGERPRINT
+            - "84:85:ac:eb:01:24:f5:cf:10:42:93:30:a3:c8:84:95"
 
       # Configure Git
       - type: shell
         name: Configure git
         command: |
-          git config --global user.email $GITHUB_USER_EMAIL
-          git config --global user.name $GITHUB_USER_NAME
+          git config --global user.email vaishali_k@techjoomla.com
+          git config --global user.name twsvaishali
 
       # Download code from staging
       - type: shell
