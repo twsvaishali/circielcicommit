@@ -36,8 +36,6 @@ jobs:
           cd download
           ls
           git clone -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL
-          cd circielcicommit
-          git status
           cd ..
           rm -rf deploy
           mkdir deploy
@@ -45,7 +43,7 @@ jobs:
           git clone -b gh-pages $CIRCLE_REPOSITORY_URL cloned-repo
           rm -rf cloned-repo/$CIRCLE_BRANCH/
           mkdir cloned-repo/$CIRCLE_BRANCH/
-          cp -R ../download/temp* cloned-repo/$CIRCLE_BRANCH/
+          cp -R ../download/circielcicommit* cloned-repo/$CIRCLE_BRANCH/
           cd cloned-repo/
           ls
           git add -A
