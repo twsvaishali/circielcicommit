@@ -36,7 +36,7 @@ jobs:
           cd download
           ls
           git clone -b $CIRCLE_BRANCH $CIRCLE_REPOSITORY_URL
-          cd circlecicommit
+          cd circielcicommit
           git status
           cd ..
           rm -rf deploy
